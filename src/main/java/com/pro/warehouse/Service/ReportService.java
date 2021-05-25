@@ -108,7 +108,11 @@ public class ReportService {
             throw new Exception("没找到相应库存");
         }
         for(ApplyOutPut report :betweenDays){
-            ApplyEnter enter =  applyEnterRepository.findApplyEnterByEnterCodeAndMaterialCode(report.getEnterCode(),report.getMaterialCode()).get(0);
+            List<ApplyEnter> temps = applyEnterRepository.findApplyEnterByEnterCodeAndMaterialCode(report.getEnterCode(),report.getMaterialCode());
+            if(temps == null || temps.size() == 0){
+               continue;
+            }
+            ApplyEnter enter = temps.get(0);
             OutReport outReport = new OutReport();
             outReport.setDemandName(report.getDemandName());
             outReport.setEnterCode(report.getEnterCode());
