@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
-    <title>物流仓库管理系统主页</title>
+    <title>纸品销售系统主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- basic styles -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
@@ -83,8 +83,8 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    物流仓库管理系统
+
+                    纸品销售系统
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -430,7 +430,7 @@
             <form action="/report-makeOnSendReport" id="storeDate">
                 <div style="float: left;font-size: 25px;">截止至：</div>
                 <div style="float: left;"><input th:value="${date}" type="date" name="endDate" id="endDate"/></div>
-                <div style="float: left;font-size: 10px;width: 80px;color:red;">若您的浏览器不支持日期控件，请手动输入日期，格式如：2018-11-04</div>
+                <div style="float: left;font-size: 10px;width: 80px;color:red;"></div>
 
                 <div style="float: left;">
                     <button type="submit" class="btn btn-primary active" data-toggle="button" style="height: 35px;" onclick="submitForm()">生成报表</button>
@@ -471,7 +471,7 @@
                             <tr>
                                 <th colspan="7"
                                     style="font-size: 30px;font-weight: bold;height: 50px;text-align: center;">
-                                    货物在途报表[<a th:text="${date}"></a>]
+                                    货物在途报表
                                 </th>
 
                             </tr>
